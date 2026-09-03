@@ -1,0 +1,62 @@
+* {
+    box-sizzing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:bisque;
+    color: black;
+}
+
+header {
+    background-color: burlywood;
+    color:aliceblue;
+    text-align: center;
+    text-shadow: 5px;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.datos_sesion_nombre {
+    background-color: aliceblue;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(2, 0, 0, 0.5);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border: 15px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:gray;
+    color: white;
+}
+
+input{
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 10px 5px 10px 0;
+    border: 1px solid #ccc;
+}
