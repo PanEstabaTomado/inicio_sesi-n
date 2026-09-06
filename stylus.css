@@ -1,24 +1,31 @@
 * {
-    box-sizzing: border-box;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:bisque;
+    background-color: bisque;
     color: black;
+    min-height: 100vh;
 }
 
 header {
     background-color: burlywood;
-    color:aliceblue;
+    color: #2b1a05;
     text-align: center;
-    text-shadow: 50px;
     padding: 30px 20px;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin: 0 0 10px;
+    color: #4a2e00;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
 }
 
 main {
@@ -35,31 +42,96 @@ main {
     box-shadow: 0 2px 6px rgba(2, 0, 0, 0.5);
 }
 
-h2 {
-    margin-top: 5;
+.oculto {
+    display: none;
 }
 
-button{
+h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.check-label input {
+    width: auto;
+    margin: 0;
+}
+
+button {
     margin: 5px;
     text-align: center;
     background-color: black;
     color: white;
-    border: 15px;
+    border: none;
     padding: 10px 16px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-button:hover{
-    background-color:gray;
+button:hover {
+    background-color: gray;
     color: white;
 }
 
-input{
+input {
     width: 100%;
     max-width: 350px;
     padding: 10px;
     margin: 10px 5px 10px 0;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
+input:focus {
+    outline: 2px solid burlywood;
+    border-color: burlywood;
+}
+
+#datos-registrados {
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+.mensaje-ok {
+    color: #1a7a1a;
+}
+
+.mensaje-error {
+    color: #c0392b;
+}
+
+.enlace-alternativo {
+    margin-top: 15px;
+}
+
+.enlace-alternativo a {
+    color: #4a2e00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlace-alternativo a:hover {
+    text-decoration: underline;
+}

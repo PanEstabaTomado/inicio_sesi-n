@@ -1,43 +1,73 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio-de-sesion-tpro</title>
 
     <link rel="stylesheet" href="stylus.css">
 </head>
 
 <body>
-    <header>
-        <h1 id= "titulo_pagina">INICIO DE SESION</h1>
-        <p id="subtitulo">Por favor, ingrese los datos que se le solicitan</p>
-    </header>
+<header>
+    <h1 id="titulo_pagina">INICIO DE SESIÓN</h1>
+    <p id="subtitulo">Por favor, ingrese los datos que se le solicitan</p>
+</header>
 
-    <main>
+<main>
 
-        <!-- Aqui va el ingreso del nombre y la contraseña -->
-         <section class="datos_sesion_nombre">
-            <h2>Ingrese nombre</h2>
+    <!-- Formulario de inicio de sesión (simulado, sin conexión a red) -->
+    <section class="datos_sesion_nombre" id="form-login">
+        <h2>Ingrese nombre</h2>
 
-            <label for="nombre">Nombre</label>
-            <input
-            type="text"
-            id="nombre"
-            placeholder="Escriba su nombre de usuario."
-            >
+        <label for="nombre">Nombre</label>
+        <input
+                type="text"
+                id="nombre"
+                placeholder="Escriba su nombre de usuario."
+                autocomplete="username"
+        >
 
-            <h2>Ingrese su contraseña</h2>
-            <label for="contraseña">Contraseña</label>
-            <input
-            type="text"
-            id="contraseña"
-            placeholder="Escriba su contraseña."
-            >
+        <h2>Ingrese su contraseña</h2>
+        <label for="contraseña">Contraseña</label>
+        <input
+                type="password"
+                id="contraseña"
+                placeholder="Escriba su contraseña."
+                autocomplete="current-password"
+        >
 
-            <button id="btn-ingresar">Ingresar Datos</button>
-            <p id="datos-registrados"></p>
-         </section>
-    </main>
+        <div class="opciones">
+            <label class="check-label">
+                <input type="checkbox" id="mostrar-contraseña">
+                Mostrar contraseña
+            </label>
+            <label class="check-label">
+                <input type="checkbox" id="recordarme">
+                Recordar inicio de sesión
+            </label>
+        </div>
+
+        <button id="btn-ingresar">Ingresar Datos</button>
+        <p id="datos-registrados"></p>
+
+        <p class="enlace-alternativo">
+            <a href="registro.html" id="link-registro">Crear nuevo usuario</a>
+        </p>
+    </section>
+
+    <!-- Sección de bienvenida, oculta hasta iniciar sesión correctamente -->
+    <section class="datos_sesion_nombre oculto" id="panel-bienvenida">
+        <h2>¡Bienvenido/a!</h2>
+        <p>Usuario: <strong id="bienvenida-usuario"></strong></p>
+        <p>Correo electrónico: <strong id="bienvenida-correo"></strong></p>
+        <button id="btn-salir">Cerrar sesión</button>
+    </section>
+</main>
+
+<script src="script.js"></script>
 </body>
+</html>
 <!-- // si tienes un hobby, computa algo respecto a eso
 // Si no quieres hacerlo, puedes buscar un proyecto de los clientes.
 IOTECH un simulador fisico para simular cortes y golpes para gendarmeria.--->

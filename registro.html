@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nuevo usuario</title>
+
+    <link rel="stylesheet" href="stylus.css">
+</head>
+
+<body>
+<header>
+    <h1 id="titulo_pagina">CREAR NUEVO USUARIO</h1>
+    <p id="subtitulo">Complete los datos para registrar una cuenta</p>
+</header>
+
+<main>
+
+    <!-- Formulario de registro (simulado, sin conexión a red) -->
+    <section class="datos_sesion_nombre" id="form-registro">
+        <h2>Ingrese nombre de usuario</h2>
+        <label for="reg-nombre">Nombre</label>
+        <input
+                type="text"
+                id="reg-nombre"
+                placeholder="Escriba un nombre de usuario."
+                autocomplete="username"
+        >
+
+        <h2>Ingrese correo electrónico</h2>
+        <label for="reg-correo">Correo electrónico</label>
+        <input
+                type="email"
+                id="reg-correo"
+                placeholder="Escriba un correo electrónico."
+                autocomplete="email"
+        >
+
+        <h2>Ingrese contraseña</h2>
+        <label for="reg-contraseña">Contraseña</label>
+        <input
+                type="password"
+                id="reg-contraseña"
+                placeholder="Escriba una contraseña."
+                autocomplete="new-password"
+        >
+
+        <h2>Confirme contraseña</h2>
+        <label for="reg-confirmar">Confirmar contraseña</label>
+        <input
+                type="password"
+                id="reg-confirmar"
+                placeholder="Repita la contraseña."
+                autocomplete="new-password"
+        >
+
+        <div class="opciones">
+            <label class="check-label">
+                <input type="checkbox" id="reg-mostrar-contraseña">
+                Mostrar contraseña
+            </label>
+        </div>
+
+        <h2>Ingrese fecha de nacimiento</h2>
+        <label for="reg-fecha-nacimiento">Fecha de nacimiento</label>
+        <input
+                type="date"
+                id="reg-fecha-nacimiento"
+                autocomplete="bday"
+        >
+
+        <button id="btn-registrar">Crear cuenta</button>
+        <p id="registro-mensaje"></p>
+
+        <p class="enlace-alternativo">
+            <a href="index.html">¿Ya tiene una cuenta? Inicie sesión</a>
+        </p>
+    </section>
+</main>
+
+<script src="registro.js"></script>
+</body>
+</html>
